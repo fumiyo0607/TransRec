@@ -7,6 +7,11 @@ Created on Sat Jan 20 14:11:02 2018
 @author: zyf
 """
 
+# TODO:
+# ・movie_les のデータで分析を行えるようにする
+# ・おそらく，TransFMのデータ整形のスクリプトがそのまま使えると思うのでそれを利用する
+# ・できたらディレクトリとか整理して，プロジェクトもまとめたい感はある
+
 import numpy as np
 import random
 from math import exp
