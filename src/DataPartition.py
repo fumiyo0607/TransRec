@@ -22,10 +22,10 @@ dataset=np.load('meta_'+dataset_name+'.npy')
 
 for user in User:
     User[user] = [b for a,b in User[user]]
-print usernum,itemnum
+print(usernum,itemnum)
 t=0
 for user in User: t+=len(User[user])
-print t 
+print(t) 
 
 
 # In[26]:
@@ -77,7 +77,7 @@ np.save('../data/'+dataset_name+'Partitioned.npy',dataset)
 # In[9]:
 
 for line in file('samples.txt'):
-    u,i,j,jp = map(int,line.rstrip().split(','))
+    u,i,j,jp = list(map(int,line.rstrip().split(',')))
     f=False
     s=set()
     for I in range(len(user_train[u])-1):
@@ -85,8 +85,8 @@ for line in file('samples.txt'):
         s.add(user_train[u][I+1])
         if user_train[u][I]==i and user_train[u][I+1]==j: f=True
     if (not f) or (jp in s):
-        print u,i,j,jp
-        print user_train[u]
+        print(u,i,j,jp)
+        print(user_train[u])
 
 
 # In[8]:
