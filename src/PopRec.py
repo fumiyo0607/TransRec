@@ -80,10 +80,10 @@ def AUC(dataset, item_train):
     #    auc_total += metrics.auc(fpr, tpr)
         
         if user%1000 == 0:
-            print user/1000
+            print (user/1000)
     
     auc_ave = auc_total/testnum
-    print "AUC: ", auc_ave
+    print ("AUC: ", auc_ave)
 
     
 item_train = PopModel(user_train)
